@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>media_menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" >
+    <style>
+        /* 隐藏 ul 表单 */
+        #media_sheet {
+            display: none;
+            list-style-type: none;
+            /* transform: translateX(-50%); */
+            /* background-color: #f9f9f9;
+            border: 1px solid #ccc; */
+            /* padding: 10px;
+            border-radius: 5px; */
+            /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+            animation: slideIn 0.5s ease forwards;
+        }
+    
+        /* 定义动画效果 */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                /* transform: translate(-50%, -20px); */
+            }
+            100% {
+                opacity: 1;
+                /* transform: translate(-50%, 0); */
+            }
+        }
+    </style>
+</head>
+<body>
+    <button  class="media_sheet" onclick="showList()" > <i class="fa-solid fa-bars"></i>  </button>
+    <ul id="media_sheet" >
+        <li style="--i:6;--clr:#1877f2;"><a href="#"><span><i class="fa-brands fa-facebook"></i></span>Facebook</a></li>
+        <li style="--i:5;--clr:#FF44AA;"><a href="https://www.instagram.com/andy__901030/" ><span><i class="fa-brands fa-instagram"></i></span>Instagram</a></li>
+        <li style="--i:4;--clr:#666666;"><a href="#"><span><i class="fa-brands fa-square-x-twitter"></i></span>Twitter</a></li>
+        <li style="--i:3;--clr:#d74545;"><a href="#"><span><i class="fa-brands fa-youtube"></i></span>Youtube</a></li>
+        <li style="--i:2;--clr:#00AA88;"><a href="#"><span><i class="fa-solid fa-phone"></i></span>Phone</a></li>
+        <li style="--i:1;--clr:#5c7ec6;"><a href="#"><span><i class="fa-brands fa-github"></i></span>Github</a></li>
+    </ul>
+</body>
+<footer>
+    <!-- <p>任何問題歡迎私訊<a href="mailto:asd0389wsx0216@gmail.com" >E-MAIL</a></p> -->
+    
+</footer>
+</html>
+<script>
+    // JavaScript 函数来显示/隐藏 ul 表单
+    function showList() {
+        var list = document.getElementById("media_sheet");
+        if (list.style.display === "none") {
+            list.style.display = "block";
+        } else {
+            list.style.display = "none";
+        }
+    }
+</script>
